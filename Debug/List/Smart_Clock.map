@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.50.2.10312/W32 for ARM                25/Sep/2016  20:06:05
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                08/Oct/2016  20:46:28
 # Copyright 2007-2015 IAR Systems AB.
 #
 #    Output file  =  D:\Work\Freescale\SmartClock\Debug\Exe\Smart_Clock.out
@@ -58,79 +58,80 @@ __SystemLibrary = DLib
   Initializer bytes  const    0x000001e0    0xa8  <for P3 s0>
                             - 0x00000288    0xa8
 
-"P2", part 2 of 2:                        0x2986
+"P2", part 2 of 2:                        0x297a
   .text              ro code  0x00000410   0xfdc  dlmalloc.o [3]
   .text              ro code  0x000013ec     0x6  abort.o [3]
   .text              ro code  0x000013f4    0x2c  xgetmemchunk.o [3]
   .text              ro code  0x00001420    0x14  exit.o [5]
   .text              ro code  0x00001434   0x7fc  Driver_SLCD.o [1]
-  .text              ro code  0x00001c30   0x2a8  DisplayM.o [1]
-  .text              ro code  0x00001ed8   0x208  Task.o [1]
-  .text              ro code  0x000020e0    0x76  ABImemcpy_unaligned.o [4]
-  .text              ro code  0x00002156    0xa0  List.o [1]
-  .text              ro code  0x000021f8    0xdc  Port.o [1]
-  .text              ro code  0x000022d4    0x6e  OS.o [1]
-  .text              ro code  0x00002344    0x88  port_asm.o [1]
-  .text              ro code  0x000023cc   0x288  ds18b20.o [1]
-  .text              ro code  0x00002654   0x1a4  TD.o [1]
-  .text              ro code  0x000027f8    0xd8  packbits_init.o [4]
-  .text              ro code  0x000028d0    0xb4  Clock.o [1]
-  .rodata            const    0x00002984    0x50  main.o [1]
-  .text              ro code  0x000029d4    0x40  zero_init3.o [4]
-  .rodata            const    0x00002a14    0x28  Driver_SLCD.o [1]
-  .text              ro code  0x00002a3c    0x28  main.o [1]
-  .text              ro code  0x00002a64    0x28  data_init.o [4]
-  .iar.init_table    const    0x00002a8c    0x2c  - Linker created -
-  .text              ro code  0x00002ab8    0x1a  cmain.o [4]
-  .text              ro code  0x00002ad2     0x4  low_level_init.o [3]
-  .text              ro code  0x00002ad6     0x4  exit.o [3]
-  .text              ro code  0x00002adc     0xa  cexit.o [4]
-  .rodata            const    0x00002ae8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002af8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b08    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b18    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b28    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b38    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b48    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b58    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b68    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b78    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b88    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002b98    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002ba8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002bb8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002bc8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002bd8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002be8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002bf8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c08    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c18    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c28    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c38    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c48    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c58    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c68    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c78    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c88    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002c98    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002ca8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002cb8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002cc8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002cd8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002ce8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002cf8    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d08    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d18    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d28    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d38    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d48    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d58    0x10  Fonts_LCD.o [1]
-  .rodata            const    0x00002d68    0x10  main.o [1]
-  .rodata            const    0x00002d78     0xc  TD.o [1]
-  .text              ro code  0x00002d84     0xc  cstartup_M.o [4]
-  .text              ro code  0x00002d90     0x4  vector_table_M_for_MK40X256.o [1]
-  .text              ro code  0x00002d94     0x2  vector_table_M_for_MK40X256.o [1]
-                            - 0x00002d96  0x2986
+  .text              ro code  0x00001c30   0x288  ds18b20.o [1]
+  .text              ro code  0x00001eb8   0x208  Task.o [1]
+  .text              ro code  0x000020c0    0xa0  List.o [1]
+  .text              ro code  0x00002160    0xdc  Port.o [1]
+  .text              ro code  0x0000223c    0x6e  OS.o [1]
+  .text              ro code  0x000022ac    0x88  port_asm.o [1]
+  .text              ro code  0x00002334   0x27c  DisplayM.o [1]
+  .text              ro code  0x000025b0    0x76  ABImemcpy_unaligned.o [4]
+  .text              ro code  0x00002628   0x1b0  TD.o [1]
+  .text              ro code  0x000027d8    0xd8  packbits_init.o [4]
+  .text              ro code  0x000028b0    0xb4  Clock.o [1]
+  .rodata            const    0x00002964    0x50  main.o [1]
+  .text              ro code  0x000029b4    0x40  zero_init3.o [4]
+  .rodata            const    0x000029f4    0x28  Driver_SLCD.o [1]
+  .text              ro code  0x00002a1c    0x28  main.o [1]
+  .text              ro code  0x00002a44    0x28  data_init.o [4]
+  .iar.init_table    const    0x00002a6c    0x2c  - Linker created -
+  .text              ro code  0x00002a98    0x1a  cmain.o [4]
+  .text              ro code  0x00002ab2     0x4  low_level_init.o [3]
+  .text              ro code  0x00002ab6     0x4  exit.o [3]
+  .text              ro code  0x00002abc     0xa  cexit.o [4]
+  .rodata            const    0x00002ac8    0x14  TD.o [1]
+  .rodata            const    0x00002adc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002aec    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002afc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b0c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b1c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b2c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b3c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b4c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b5c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b6c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b7c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b8c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002b9c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bac    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bbc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bcc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bdc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bec    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002bfc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c0c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c1c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c2c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c3c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c4c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c5c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c6c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c7c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c8c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002c9c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002cac    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002cbc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002ccc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002cdc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002cec    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002cfc    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d0c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d1c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d2c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d3c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d4c    0x10  Fonts_LCD.o [1]
+  .rodata            const    0x00002d5c    0x10  main.o [1]
+  .rodata            const    0x00002d6c     0xc  TD.o [1]
+  .text              ro code  0x00002d78     0xc  cstartup_M.o [4]
+  .text              ro code  0x00002d84     0x4  vector_table_M_for_MK40X256.o [1]
+  .text              ro code  0x00002d88     0x2  vector_table_M_for_MK40X256.o [1]
+                            - 0x00002d8a  0x297a
 
 "P3", part 1 of 3:                         0x181
   P3 s0                       0x1fff8000   0x181  <Init block>
@@ -138,34 +139,33 @@ __SystemLibrary = DLib
     .data            inited   0x1fff8180     0x1  Driver_SLCD.o [1]
                             - 0x1fff8181   0x181
 
-"P3", part 2 of 3:                         0x594
+"P3", part 2 of 3:                         0x4e8
   .bss               zero     0x1fff8184   0x1d8  dlmalloc.o [3]
   .bss               zero     0x1fff835c   0x178  DisplayM.o [1]
   .bss               zero     0x1fff84d4   0x12c  DisplayM.o [1]
-  .bss               zero     0x1fff8600    0xac  DisplayM.o [1]
-  .bss               zero     0x1fff86ac    0x18  dlmalloc.o [3]
-  .bss               zero     0x1fff86c4    0x14  DisplayM.o [1]
-  .bss               zero     0x1fff86d8     0x8  DisplayM.o [1]
-  .bss               zero     0x1fff86e0     0x8  Task.o [1]
-  .bss               zero     0x1fff86e8     0x8  Task.o [1]
-  .bss               zero     0x1fff86f0     0x8  Task.o [1]
-  .bss               zero     0x1fff86f8     0x8  TD.o [1]
-  .bss               zero     0x1fff8700     0x4  DisplayM.o [1]
-  .bss               zero     0x1fff8704     0x4  ds18b20.o [1]
-  .bss               zero     0x1fff8708     0x4  Task.o [1]
-  .bss               zero     0x1fff870c     0x4  TD.o [1]
-  .bss               zero     0x1fff8710     0x4  xgetmemchunk.o [3]
-  .bss               zero     0x1fff8714     0x2  ds18b20.o [1]
-  .bss               zero     0x1fff8716     0x1  TD.o [1]
-  .bss               zero     0x1fff8717     0x1  TD.o [1]
-                            - 0x1fff8718   0x594
+  .bss               zero     0x1fff8600    0x18  dlmalloc.o [3]
+  .bss               zero     0x1fff8618    0x14  DisplayM.o [1]
+  .bss               zero     0x1fff862c     0x8  DisplayM.o [1]
+  .bss               zero     0x1fff8634     0x8  Task.o [1]
+  .bss               zero     0x1fff863c     0x8  Task.o [1]
+  .bss               zero     0x1fff8644     0x8  Task.o [1]
+  .bss               zero     0x1fff864c     0x8  TD.o [1]
+  .bss               zero     0x1fff8654     0x4  DisplayM.o [1]
+  .bss               zero     0x1fff8658     0x4  ds18b20.o [1]
+  .bss               zero     0x1fff865c     0x4  Task.o [1]
+  .bss               zero     0x1fff8660     0x4  TD.o [1]
+  .bss               zero     0x1fff8664     0x4  xgetmemchunk.o [3]
+  .bss               zero     0x1fff8668     0x2  ds18b20.o [1]
+  .bss               zero     0x1fff866a     0x1  TD.o [1]
+  .bss               zero     0x1fff866b     0x1  TD.o [1]
+                            - 0x1fff866c   0x4e8
 
 "P3", part 3 of 3:                        0x3000
-  CSTACK                      0x1fff8718  0x1000  <Block>
-    CSTACK           uninit   0x1fff8718  0x1000  <Block tail>
-  HEAP                        0x1fff9718  0x2000  <Block>
-    HEAP             uninit   0x1fff9718  0x2000  <Block tail>
-                            - 0x1fffb718  0x3000
+  CSTACK                      0x1fff8670  0x1000  <Block>
+    CSTACK           uninit   0x1fff8670  0x1000  <Block tail>
+  HEAP                        0x1fff9670  0x2000  <Block>
+    HEAP             uninit   0x1fff9670  0x2000  <Block tail>
+                            - 0x1fffb670  0x3000
 
 
 *******************************************************************************
@@ -175,8 +175,8 @@ __SystemLibrary = DLib
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x594:
-          0x1fff8184  0x594
+    1 destination range, total size 0x4e8:
+          0x1fff8184  0x4e8
 
 Copy/packbits (__iar_packbits_init3)
     1 source range, total size 0xa8 (43% of destination):
@@ -194,20 +194,20 @@ Copy/packbits (__iar_packbits_init3)
     ------                         -------  -------  -------
 D:\Work\Freescale\SmartClock\Debug\Obj: [1]
     Clock.o                            180
-    DisplayM.o                         680               880
+    DisplayM.o                         636               708
     Driver_SLCD.o                    2 044       41        1
     Fonts_LCD.o                                 807      384
     List.o                             160
     OS.o                               110
     Port.o                             220
-    TD.o                               420       12       14
+    TD.o                               432       32       14
     Task.o                             520                28
     ds18b20.o                          648                 6
     main.o                              40       96
     port_asm.o                         136
     vector_table_M_for_MK40X256.o      486
     --------------------------------------------------------
-    Total:                           5 644      956    1 313
+    Total:                           5 612      976    1 141
 
 command line: [2]
     --------------------------------------------------------
@@ -241,7 +241,7 @@ shb_l.a: [5]
     Gaps                                 8        2
     Linker created                               44   12 288
 ------------------------------------------------------------
-    Grand Total:                    10 276    1 002   14 101
+    Grand Total:                    10 244    1 022   13 929
 
 
 *******************************************************************************
@@ -250,124 +250,123 @@ shb_l.a: [5]
 
 Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
-.iar.init_table$$Base   0x00002a8c          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x00002ab8          --   Gb  - Linker created -
-?main                   0x00002ab9         Code  Gb  cmain.o [4]
-CSTACK$$Base            0x1fff8718          --   Gb  - Linker created -
-CSTACK$$Limit           0x1fff9718          --   Gb  - Linker created -
-DS_DelayCycles          0x000023cd    0x8  Code  Lc  ds18b20.o [1]
-DS_GetTemperature       0x000025e3   0x40  Code  Gb  ds18b20.o [1]
-DS_Init                 0x000023d5   0x16  Code  Gb  ds18b20.o [1]
-DS_MainTask             0x00002623   0x14  Code  Gb  ds18b20.o [1]
-DS_Read                 0x000024b9   0x68  Code  Gb  ds18b20.o [1]
-DS_ReadTemp             0x00002521   0xc2  Code  Gb  ds18b20.o [1]
-DS_ResetCommunication   0x000023eb   0x64  Code  Gb  ds18b20.o [1]
-DS_WriteCommand         0x0000244f   0x6a  Code  Gb  ds18b20.o [1]
-DS_sensorOff            0x1fff8704    0x4  Data  Lc  ds18b20.o [1]
-DispM_DisplayBuffer     0x00001ddd   0x98  Code  Lc  DisplayM.o [1]
-DispM_DoDisplayBuffer   0x00001d1b   0x82  Code  Lc  DisplayM.o [1]
-DispM_Error             0x00001e75    0xa  Code  Lc  DisplayM.o [1]
-DispM_IdleState         0x00001d9d    0x2  Code  Lc  DisplayM.o [1]
-DispM_Init              0x00001c31   0x56  Code  Gb  DisplayM.o [1]
-DispM_MainTask          0x00001c9b   0x1a  Code  Gb  DisplayM.o [1]
-DispM_PrintString       0x00001e7f   0x3e  Code  Gb  DisplayM.o [1]
-DispM_Strlen            0x00001c87   0x14  Code  Lc  DisplayM.o [1]
+.iar.init_table$$Base   0x00002a6c          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00002a98          --   Gb  - Linker created -
+?main                   0x00002a99         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x1fff8670          --   Gb  - Linker created -
+CSTACK$$Limit           0x1fff9670          --   Gb  - Linker created -
+DS_DelayCycles          0x00001c31    0x8  Code  Lc  ds18b20.o [1]
+DS_GetTemperature       0x00001e47   0x40  Code  Gb  ds18b20.o [1]
+DS_Init                 0x00001c39   0x16  Code  Gb  ds18b20.o [1]
+DS_MainTask             0x00001e87   0x14  Code  Gb  ds18b20.o [1]
+DS_Read                 0x00001d1d   0x68  Code  Gb  ds18b20.o [1]
+DS_ReadTemp             0x00001d85   0xc2  Code  Gb  ds18b20.o [1]
+DS_ResetCommunication   0x00001c4f   0x64  Code  Gb  ds18b20.o [1]
+DS_WriteCommand         0x00001cb3   0x6a  Code  Gb  ds18b20.o [1]
+DS_sensorOff            0x1fff8658    0x4  Data  Lc  ds18b20.o [1]
+DispM_DisplayBuffer     0x000024d1   0x7e  Code  Lc  DisplayM.o [1]
+DispM_Error             0x00002551    0xa  Code  Lc  DisplayM.o [1]
+DispM_IdleState         0x00002491    0x2  Code  Lc  DisplayM.o [1]
+DispM_Init              0x00002335   0x46  Code  Gb  DisplayM.o [1]
+DispM_MainTask          0x0000238f   0x1a  Code  Gb  DisplayM.o [1]
+DispM_PrintString       0x0000255b   0x3e  Code  Gb  DisplayM.o [1]
+DispM_SetDisplay        0x0000240f   0x82  Code  Lc  DisplayM.o [1]
+DispM_Strlen            0x0000237b   0x14  Code  Lc  DisplayM.o [1]
 DispM_UpdateBaseDisplayBuffer
-                        0x00001cb5   0x66  Code  Lc  DisplayM.o [1]
+                        0x000023a9   0x66  Code  Lc  DisplayM.o [1]
 DispM_UpdateDisplayBuffer
-                        0x00001da1   0x3c  Code  Lc  DisplayM.o [1]
+                        0x00002495   0x3c  Code  Lc  DisplayM.o [1]
 DispM_aui8GlobalStringBuffer
                         0x1fff835c  0x178  Data  Lc  DisplayM.o [1]
 DispM_aui8UnalteredStringBuffer
                         0x1fff84d4  0x12c  Data  Lc  DisplayM.o [1]
-DispM_blankSpaceBuffer  0x1fff8600   0xac  Data  Lc  DisplayM.o [1]
-DispM_info              0x1fff86d8    0x8  Data  Lc  DisplayM.o [1]
-DispM_pDisplayBuffer    0x1fff8700    0x4  Data  Lc  DisplayM.o [1]
-DispM_state             0x1fff86c4   0x14  Data  Lc  DisplayM.o [1]
+DispM_info              0x1fff862c    0x8  Data  Lc  DisplayM.o [1]
+DispM_pDisplayBuffer    0x1fff8654    0x4  Data  Lc  DisplayM.o [1]
+DispM_state             0x1fff8618   0x14  Data  Lc  DisplayM.o [1]
 Fonts                   0x1fff8000  0x180  Data  Gb  Fonts_LCD.o [1]
-HEAP$$Base              0x1fff9718          --   Gb  - Linker created -
-HEAP$$Limit             0x1fffb718          --   Gb  - Linker created -
-InStream_Read           0x000027f9   0x22  Code  Lc  packbits_init.o [4]
-InitClock               0x000028d1   0xb4  Code  Gb  Clock.o [1]
-List_CreateListItem     0x000021e1   0x16  Code  Gb  List.o [1]
-List_InsertElement      0x00002157   0x36  Code  Gb  List.o [1]
+HEAP$$Base              0x1fff9670          --   Gb  - Linker created -
+HEAP$$Limit             0x1fffb670          --   Gb  - Linker created -
+InStream_Read           0x000027d9   0x22  Code  Lc  packbits_init.o [4]
+InitClock               0x000028b1   0xb4  Code  Gb  Clock.o [1]
+List_CreateListItem     0x0000214b   0x16  Code  Gb  List.o [1]
+List_InsertElement      0x000020c1   0x36  Code  Gb  List.o [1]
 List_InsertElementAtEnd
-                        0x0000218d   0x1a  Code  Gb  List.o [1]
-List_RemoveElement      0x000021a7   0x3a  Code  Gb  List.o [1]
-NVIC_SetPriority        0x000021f9   0x22  Code  Lc  Port.o [1]
-OS_IdleTask             0x00002341    0x2  Code  Gb  OS.o [1]
-OS_Init                 0x000022d5   0x20  Code  Gb  OS.o [1]
-OS_StartScheduler       0x0000230d   0x2a  Code  Gb  OS.o [1]
-OS_TickHandler          0x000022f5   0x18  Code  Gb  OS.o [1]
-OS_scheduledTaskList    0x00002984   0x50  Data  Gb  main.o [1]
-PendSV_Handler          0x00002345         Code  Gb  port_asm.o [1]
-Port_EnableVFP          0x000023b3         Code  Gb  port_asm.o [1]
-Port_Init               0x00002249    0x2  Code  Gb  Port.o [1]
+                        0x000020f7   0x1a  Code  Gb  List.o [1]
+List_RemoveElement      0x00002111   0x3a  Code  Gb  List.o [1]
+NVIC_SetPriority        0x00002161   0x22  Code  Lc  Port.o [1]
+OS_IdleTask             0x000022a9    0x2  Code  Gb  OS.o [1]
+OS_Init                 0x0000223d   0x20  Code  Gb  OS.o [1]
+OS_StartScheduler       0x00002275   0x2a  Code  Gb  OS.o [1]
+OS_TickHandler          0x0000225d   0x18  Code  Gb  OS.o [1]
+OS_scheduledTaskList    0x00002964   0x50  Data  Gb  main.o [1]
+PendSV_Handler          0x000022ad         Code  Gb  port_asm.o [1]
+Port_EnableVFP          0x0000231b         Code  Gb  port_asm.o [1]
+Port_Init               0x000021b1    0x2  Code  Gb  Port.o [1]
 Port_InitializeTaskStack
-                        0x00002277   0x42  Code  Gb  Port.o [1]
-Port_SetupInterrupts    0x0000224b   0x1e  Code  Gb  Port.o [1]
-Port_StartFirstTask     0x0000239d         Code  Gb  port_asm.o [1]
-Port_TaskExitError      0x00002275    0x2  Code  Gb  Port.o [1]
-Region$$Table$$Base     0x00002a8c          --   Gb  - Linker created -
-Region$$Table$$Limit    0x00002ab8          --   Gb  - Linker created -
-SVC_Handler             0x00002381         Code  Gb  port_asm.o [1]
-SysTick_Config          0x0000221b   0x2e  Code  Lc  Port.o [1]
-SysTick_Handler         0x00002269    0xc  Code  Gb  Port.o [1]
-TD_Init                 0x00002655   0x34  Code  Gb  TD.o [1]
-TD_MainTask             0x00002689   0x2c  Code  Gb  TD.o [1]
-TD_UpdateDate           0x00002705   0xe0  Code  Lc  TD.o [1]
-TD_UpdateTime           0x000026b5   0x50  Code  Lc  TD.o [1]
-TD_currentDate          0x1fff86f8    0x8  Data  Lc  TD.o [1]
-TD_currentTime          0x1fff870c    0x4  Data  Lc  TD.o [1]
-TD_daysInAMonth         0x00002d78    0xc  Data  Lc  TD.o [1]
-TD_ui1ChangeDay         0x1fff8716    0x1  Data  Lc  TD.o [1]
+                        0x000021df   0x42  Code  Gb  Port.o [1]
+Port_SetupInterrupts    0x000021b3   0x1e  Code  Gb  Port.o [1]
+Port_StartFirstTask     0x00002305         Code  Gb  port_asm.o [1]
+Port_TaskExitError      0x000021dd    0x2  Code  Gb  Port.o [1]
+Region$$Table$$Base     0x00002a6c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00002a98          --   Gb  - Linker created -
+SVC_Handler             0x000022e9         Code  Gb  port_asm.o [1]
+SysTick_Config          0x00002183   0x2e  Code  Lc  Port.o [1]
+SysTick_Handler         0x000021d1    0xc  Code  Gb  Port.o [1]
+TD_Init                 0x00002629   0x34  Code  Gb  TD.o [1]
+TD_MainTask             0x0000265d   0x34  Code  Gb  TD.o [1]
+TD_UpdateDate           0x000026e1   0xe0  Code  Lc  TD.o [1]
+TD_UpdateTime           0x00002691   0x50  Code  Lc  TD.o [1]
+TD_currentDate          0x1fff864c    0x8  Data  Lc  TD.o [1]
+TD_currentTime          0x1fff8660    0x4  Data  Lc  TD.o [1]
+TD_daysInAMonth         0x00002d6c    0xc  Data  Lc  TD.o [1]
+TD_ui1ChangeDay         0x1fff866a    0x1  Data  Lc  TD.o [1]
 Task_AddTaskInReadyList
-                        0x00001f13   0x2e  Code  Lc  Task.o [1]
-Task_BlockedList        0x1fff86e8    0x8  Data  Gb  Task.o [1]
-Task_CheckDelayedTasks  0x00002019   0x44  Code  Lc  Task.o [1]
-Task_Create             0x00001f67   0x70  Code  Gb  Task.o [1]
-Task_Delay              0x0000205d   0x64  Code  Gb  Task.o [1]
-Task_Init               0x00001f41   0x26  Code  Gb  Task.o [1]
-Task_InsertInReadyList  0x00001ed9   0x3a  Code  Lc  Task.o [1]
-Task_ReadyList          0x1fff86e0    0x8  Data  Gb  Task.o [1]
-Task_Schedule           0x00001fd7   0x42  Code  Gb  Task.o [1]
-Task_SuspendedList      0x1fff86f0    0x8  Data  Gb  Task.o [1]
-Task_SwitchContext      0x000020c1    0xc  Code  Gb  Task.o [1]
-Task_pCurrentTask       0x1fff8708    0x4  Data  Gb  Task.o [1]
+                        0x00001ef3   0x2e  Code  Lc  Task.o [1]
+Task_BlockedList        0x1fff863c    0x8  Data  Gb  Task.o [1]
+Task_CheckDelayedTasks  0x00001ff9   0x44  Code  Lc  Task.o [1]
+Task_Create             0x00001f47   0x70  Code  Gb  Task.o [1]
+Task_Delay              0x0000203d   0x64  Code  Gb  Task.o [1]
+Task_Init               0x00001f21   0x26  Code  Gb  Task.o [1]
+Task_InsertInReadyList  0x00001eb9   0x3a  Code  Lc  Task.o [1]
+Task_ReadyList          0x1fff8634    0x8  Data  Gb  Task.o [1]
+Task_Schedule           0x00001fb7   0x42  Code  Gb  Task.o [1]
+Task_SuspendedList      0x1fff8644    0x8  Data  Gb  Task.o [1]
+Task_SwitchContext      0x000020a1    0xc  Code  Gb  Task.o [1]
+Task_pCurrentTask       0x1fff865c    0x4  Data  Gb  Task.o [1]
 WaveFormShiftRegisterTable
-                        0x00002a14   0x28  Data  Gb  Driver_SLCD.o [1]
-_0                      0x00002ae8   0x10  Data  Gb  Fonts_LCD.o [1]
-_1                      0x00002af8   0x10  Data  Gb  Fonts_LCD.o [1]
-_2                      0x00002b08   0x10  Data  Gb  Fonts_LCD.o [1]
-_3                      0x00002b18   0x10  Data  Gb  Fonts_LCD.o [1]
-_4                      0x00002b28   0x10  Data  Gb  Fonts_LCD.o [1]
-_5                      0x00002b38   0x10  Data  Gb  Fonts_LCD.o [1]
-_6                      0x00002b48   0x10  Data  Gb  Fonts_LCD.o [1]
-_7                      0x00002b58   0x10  Data  Gb  Fonts_LCD.o [1]
-_8                      0x00002b68   0x10  Data  Gb  Fonts_LCD.o [1]
-_9                      0x00002b78   0x10  Data  Gb  Fonts_LCD.o [1]
-_A                      0x00002b88   0x10  Data  Gb  Fonts_LCD.o [1]
-_B                      0x00002b98   0x10  Data  Gb  Fonts_LCD.o [1]
-_C                      0x00002ba8   0x10  Data  Gb  Fonts_LCD.o [1]
-_Colon                  0x00002d48   0x10  Data  Gb  Fonts_LCD.o [1]
-_D                      0x00002bb8   0x10  Data  Gb  Fonts_LCD.o [1]
-_Dot                    0x00002d38   0x10  Data  Gb  Fonts_LCD.o [1]
-_E                      0x00002bc8   0x10  Data  Gb  Fonts_LCD.o [1]
-_Exclamation            0x00002d28   0x10  Data  Gb  Fonts_LCD.o [1]
-_F                      0x00002bd8   0x10  Data  Gb  Fonts_LCD.o [1]
-_G                      0x00002be8   0x10  Data  Gb  Fonts_LCD.o [1]
-_H                      0x00002bf8   0x10  Data  Gb  Fonts_LCD.o [1]
-_I                      0x00002c08   0x10  Data  Gb  Fonts_LCD.o [1]
-_J                      0x00002c18   0x10  Data  Gb  Fonts_LCD.o [1]
-_K                      0x00002c28   0x10  Data  Gb  Fonts_LCD.o [1]
-_L                      0x00002c38   0x10  Data  Gb  Fonts_LCD.o [1]
-_M                      0x00002c48   0x10  Data  Gb  Fonts_LCD.o [1]
-_N                      0x00002c58   0x10  Data  Gb  Fonts_LCD.o [1]
-_O                      0x00002c68   0x10  Data  Gb  Fonts_LCD.o [1]
-_P                      0x00002c78   0x10  Data  Gb  Fonts_LCD.o [1]
-_Q                      0x00002c88   0x10  Data  Gb  Fonts_LCD.o [1]
-_R                      0x00002c98   0x10  Data  Gb  Fonts_LCD.o [1]
-_S                      0x00002ca8   0x10  Data  Gb  Fonts_LCD.o [1]
+                        0x000029f4   0x28  Data  Gb  Driver_SLCD.o [1]
+_0                      0x00002adc   0x10  Data  Gb  Fonts_LCD.o [1]
+_1                      0x00002aec   0x10  Data  Gb  Fonts_LCD.o [1]
+_2                      0x00002afc   0x10  Data  Gb  Fonts_LCD.o [1]
+_3                      0x00002b0c   0x10  Data  Gb  Fonts_LCD.o [1]
+_4                      0x00002b1c   0x10  Data  Gb  Fonts_LCD.o [1]
+_5                      0x00002b2c   0x10  Data  Gb  Fonts_LCD.o [1]
+_6                      0x00002b3c   0x10  Data  Gb  Fonts_LCD.o [1]
+_7                      0x00002b4c   0x10  Data  Gb  Fonts_LCD.o [1]
+_8                      0x00002b5c   0x10  Data  Gb  Fonts_LCD.o [1]
+_9                      0x00002b6c   0x10  Data  Gb  Fonts_LCD.o [1]
+_A                      0x00002b7c   0x10  Data  Gb  Fonts_LCD.o [1]
+_B                      0x00002b8c   0x10  Data  Gb  Fonts_LCD.o [1]
+_C                      0x00002b9c   0x10  Data  Gb  Fonts_LCD.o [1]
+_Colon                  0x00002d3c   0x10  Data  Gb  Fonts_LCD.o [1]
+_D                      0x00002bac   0x10  Data  Gb  Fonts_LCD.o [1]
+_Dot                    0x00002d2c   0x10  Data  Gb  Fonts_LCD.o [1]
+_E                      0x00002bbc   0x10  Data  Gb  Fonts_LCD.o [1]
+_Exclamation            0x00002d1c   0x10  Data  Gb  Fonts_LCD.o [1]
+_F                      0x00002bcc   0x10  Data  Gb  Fonts_LCD.o [1]
+_G                      0x00002bdc   0x10  Data  Gb  Fonts_LCD.o [1]
+_H                      0x00002bec   0x10  Data  Gb  Fonts_LCD.o [1]
+_I                      0x00002bfc   0x10  Data  Gb  Fonts_LCD.o [1]
+_J                      0x00002c0c   0x10  Data  Gb  Fonts_LCD.o [1]
+_K                      0x00002c1c   0x10  Data  Gb  Fonts_LCD.o [1]
+_L                      0x00002c2c   0x10  Data  Gb  Fonts_LCD.o [1]
+_M                      0x00002c3c   0x10  Data  Gb  Fonts_LCD.o [1]
+_N                      0x00002c4c   0x10  Data  Gb  Fonts_LCD.o [1]
+_O                      0x00002c5c   0x10  Data  Gb  Fonts_LCD.o [1]
+_P                      0x00002c6c   0x10  Data  Gb  Fonts_LCD.o [1]
+_Q                      0x00002c7c   0x10  Data  Gb  Fonts_LCD.o [1]
+_R                      0x00002c8c   0x10  Data  Gb  Fonts_LCD.o [1]
+_S                      0x00002c9c   0x10  Data  Gb  Fonts_LCD.o [1]
 _SLCDModule_ClearLCD    0x00001915  0x112  Code  Gb  Driver_SLCD.o [1]
 _SLCDModule_ClearSegment
                         0x000018b1   0x32  Code  Gb  Driver_SLCD.o [1]
@@ -383,44 +382,44 @@ _SLCDModule_StringWFRegisters
                         0x000016eb   0xa0  Code  Gb  Driver_SLCD.o [1]
 _SLCDModule_WriteWFRegister
                         0x00001a29   0xa0  Code  Gb  Driver_SLCD.o [1]
-_SPACE                  0x00002d58   0x10  Data  Gb  Fonts_LCD.o [1]
-_T                      0x00002cb8   0x10  Data  Gb  Fonts_LCD.o [1]
-_U                      0x00002cc8   0x10  Data  Gb  Fonts_LCD.o [1]
-_V                      0x00002cd8   0x10  Data  Gb  Fonts_LCD.o [1]
-_W                      0x00002ce8   0x10  Data  Gb  Fonts_LCD.o [1]
-_X                      0x00002cf8   0x10  Data  Gb  Fonts_LCD.o [1]
-_Y                      0x00002d08   0x10  Data  Gb  Fonts_LCD.o [1]
-_Z                      0x00002d18   0x10  Data  Gb  Fonts_LCD.o [1]
-__cmain                 0x00002ab9         Code  Gb  cmain.o [4]
+_SPACE                  0x00002d4c   0x10  Data  Gb  Fonts_LCD.o [1]
+_T                      0x00002cac   0x10  Data  Gb  Fonts_LCD.o [1]
+_U                      0x00002cbc   0x10  Data  Gb  Fonts_LCD.o [1]
+_V                      0x00002ccc   0x10  Data  Gb  Fonts_LCD.o [1]
+_W                      0x00002cdc   0x10  Data  Gb  Fonts_LCD.o [1]
+_X                      0x00002cec   0x10  Data  Gb  Fonts_LCD.o [1]
+_Y                      0x00002cfc   0x10  Data  Gb  Fonts_LCD.o [1]
+_Z                      0x00002d0c   0x10  Data  Gb  Fonts_LCD.o [1]
+__cmain                 0x00002a99         Code  Gb  cmain.o [4]
 __data_GetMemChunk      0x000013f5   0x2c  Code  Gb  xgetmemchunk.o [3]
 __exit                  0x00001421   0x14  Code  Gb  exit.o [5]
-__iar_data_init3        0x00002a65   0x28  Code  Gb  data_init.o [4]
+__iar_data_init3        0x00002a45   0x28  Code  Gb  data_init.o [4]
 __iar_dlmalloc          0x00001131  0x2aa  Code  Gb  dlmalloc.o [3]
-__iar_packbits_init3    0x0000281b   0xb6  Code  Gb  packbits_init.o [4]
-__iar_program_start     0x00002d85         Code  Gb  cstartup_M.o [4]
+__iar_packbits_init3    0x000027fb   0xb6  Code  Gb  packbits_init.o [4]
+__iar_program_start     0x00002d79         Code  Gb  cstartup_M.o [4]
 __iar_unaligned___aeabi_memcpy
-                        0x000020e1         Code  Gb  ABImemcpy_unaligned.o [4]
+                        0x000025b1         Code  Gb  ABImemcpy_unaligned.o [4]
 __iar_unaligned___aeabi_memcpy4
-                        0x00002101         Code  Gb  ABImemcpy_unaligned.o [4]
+                        0x000025d1         Code  Gb  ABImemcpy_unaligned.o [4]
 __iar_unaligned___aeabi_memcpy8
-                        0x00002101         Code  Gb  ABImemcpy_unaligned.o [4]
-__iar_zero_init3        0x000029d5   0x40  Code  Gb  zero_init3.o [4]
-__low_level_init        0x00002ad3    0x4  Code  Gb  low_level_init.o [3]
+                        0x000025d1         Code  Gb  ABImemcpy_unaligned.o [4]
+__iar_zero_init3        0x000029b5   0x40  Code  Gb  zero_init3.o [4]
+__low_level_init        0x00002ab3    0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x00000000         Data  Gb  vector_table_M_for_MK40X256.o [1]
-_call_main              0x00002ac5         Code  Gb  cmain.o [4]
-_exit                   0x00002add         Code  Gb  cexit.o [4]
+_call_main              0x00002aa5         Code  Gb  cmain.o [4]
+_exit                   0x00002abd         Code  Gb  cexit.o [4]
 _gm_                    0x1fff8184  0x1d8  Data  Lc  dlmalloc.o [3]
-_main                   0x00002acf         Code  Gb  cmain.o [4]
+_main                   0x00002aaf         Code  Gb  cmain.o [4]
 abort                   0x000013ed    0x6  Code  Gb  abort.o [3]
-exit                    0x00002ad7    0x4  Code  Gb  exit.o [3]
+exit                    0x00002ab7    0x4  Code  Gb  exit.o [3]
 init_mparams            0x0000042b   0x32  Code  Lc  dlmalloc.o [3]
 init_top                0x0000045d   0x34  Code  Lc  dlmalloc.o [3]
-main                    0x00002a3d   0x28  Code  Gb  main.o [1]
-mparams                 0x1fff86ac   0x18  Data  Lc  dlmalloc.o [3]
+main                    0x00002a1d   0x28  Code  Gb  main.o [1]
+mparams                 0x1fff8600   0x18  Data  Lc  dlmalloc.o [3]
 prepend_alloc           0x00000491  0x36c  Code  Lc  dlmalloc.o [3]
 segment_holding         0x00000411   0x1a  Code  Lc  dlmalloc.o [3]
 sys_alloc               0x000007fd  0x386  Code  Lc  dlmalloc.o [3]
-temperature             0x1fff8714    0x2  Data  Gb  ds18b20.o [1]
+temperature             0x1fff8668    0x2  Data  Gb  ds18b20.o [1]
 tmalloc_large           0x00000b91  0x390  Code  Lc  dlmalloc.o [3]
 tmalloc_small           0x00000f21  0x210  Code  Lc  dlmalloc.o [3]
 
@@ -431,9 +430,9 @@ tmalloc_small           0x00000f21  0x210  Code  Lc  dlmalloc.o [3]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  10 276 bytes of readonly  code memory
-   1 002 bytes of readonly  data memory
-  14 101 bytes of readwrite data memory
+  10 244 bytes of readonly  code memory
+   1 022 bytes of readonly  data memory
+  13 929 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

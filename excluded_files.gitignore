@@ -7,4 +7,5 @@
 **/*.ewt
 **/*.ewd
 **/*.browse
+**/Obj/**
 settings/**

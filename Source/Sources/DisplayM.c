@@ -31,7 +31,6 @@ typedef struct {
 
 static uint8_t DispM_aui8UnalteredStringBuffer[CHAR_SIZE * DISPM_MAX_STRING_LEN];
 static uint8_t DispM_aui8GlobalStringBuffer[CHAR_SIZE * DISPM_GLOBAL_BUFFER_SIZE];
-static uint8_t DispM_blankSpaceBuffer[CHAR_MAX_POSITION_VALUE * DISPM_CHAR_HEIGHT];
 static uint8_t *DispM_pDisplayBuffer;
 static DispM_StateType DispM_state;
 static DispM_InfoType DispM_info;
@@ -43,13 +42,11 @@ static void DispM_IdleState(void);
 static void DispM_UpdateDisplayBuffer(void);
 static void DispM_DisplayBuffer(void);
 static void DispM_Error(void);
-uint8_t DispM_DoDisplayBuffer(uint8_t *buffer, uint8_t pixelX, uint8_t pixelY);
+uint8_t DispM_SetDisplay(uint8_t *buffer, uint8_t pixelX, uint8_t pixelY);
 
 
 void DispM_Init(void)
-{  
-  uint32_t idx;
-  
+{    
   _SLCDModule_Init();
   DispM_pDisplayBuffer = DispM_aui8GlobalStringBuffer;
   DispM_state.currentState = DISPM_IDLE;
@@ -62,9 +59,6 @@ void DispM_Init(void)
   DispM_info.currentPriority = 100u;
   DispM_info.delayDisplay = DISPM_FALSE;
   
-  for (idx = 0u; idx < sizeof(DispM_blankSpaceBuffer); idx++) {
-    DispM_blankSpaceBuffer[idx] = 0u;
-  }
 }
 
 static uint32_t DispM_Strlen(char * pString)
@@ -124,7 +118,7 @@ static void DispM_UpdateBaseDisplayBuffer(char *pString)
 }
 
 
-static uint8_t DispM_DoDisplayBuffer(uint8_t *buffer, uint8_t pixelX, uint8_t pixelY)
+static uint8_t DispM_SetDisplay(uint8_t *buffer, uint8_t pixelX, uint8_t pixelY)
 {
   uint8_t row, column;
   
@@ -189,19 +183,16 @@ static void DispM_DisplayBuffer(void)
   
   if (currentRemainder < sizeof(tempBuffer) ) {
     memcpy(tempBuffer, DispM_pDisplayBuffer, currentRemainder);
-    if (DispM_info.delayDisplay == DISPM_FALSE) {
-      memcpy(tempBuffer + currentRemainder, DispM_aui8GlobalStringBuffer, sizeof(tempBuffer) - currentRemainder);    
-    } else {
-      memcpy(tempBuffer + currentRemainder, DispM_blankSpaceBuffer, sizeof(tempBuffer) - currentRemainder);
-    }
-    DispM_DoDisplayBuffer(tempBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
+   
+    memcpy(tempBuffer + currentRemainder, DispM_aui8UnalteredStringBuffer, sizeof(tempBuffer) - currentRemainder);
+    DispM_SetDisplay(tempBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
   } else {
-    DispM_DoDisplayBuffer(DispM_pDisplayBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
+    DispM_SetDisplay(DispM_pDisplayBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
   }
   
   DispM_pDisplayBuffer += DISPM_DYNAMIC_DISP_INC;
   
-  if (DispM_pDisplayBuffer >= (DispM_aui8GlobalStringBuffer + DispM_info.usedBufferSize)) {
+  if ((DispM_pDisplayBuffer - DispM_aui8GlobalStringBuffer) >= DispM_info.usedBufferSize) {
     DispM_pDisplayBuffer = DispM_aui8GlobalStringBuffer;
     if (DispM_info.delayDisplay == DISPM_TRUE) {
       DispM_state.currentState = DISPM_UPDATE_DISPLAY_BUFFER;
