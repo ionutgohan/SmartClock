@@ -38,7 +38,7 @@ void TD_MainTask(void *params)
   if (ui8TaskCnt == 2u) {
     TD_UpdateTime();
     TD_UpdateDate();
-    DispM_PrintString("9876543210123456", 5);
+    DispM_PrintString("9876543210123456789", 5);
     ui8TaskCnt = 0u;
   }  
   
