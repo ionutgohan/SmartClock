@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.50.2.10312/W32 for ARM                09/Oct/2016  17:59:16
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                23/Oct/2016  21:06:01
 # Copyright 2007-2015 IAR Systems AB.
 #
 #    Output file  =  D:\Work\Freescale\SmartClock\Debug\Exe\Smart_Clock.out
@@ -16,6 +16,7 @@
 #        D:\Work\Freescale\SmartClock\Debug\Obj\OS.o
 #        D:\Work\Freescale\SmartClock\Debug\Obj\Port.o
 #        D:\Work\Freescale\SmartClock\Debug\Obj\port_asm.o
+#        D:\Work\Freescale\SmartClock\Debug\Obj\SM.o
 #        D:\Work\Freescale\SmartClock\Debug\Obj\Task.o
 #        D:\Work\Freescale\SmartClock\Debug\Obj\TD.o
 #        D:\Work\Freescale\SmartClock\Debug\Obj\vector_table_M_for_MK40X256.o

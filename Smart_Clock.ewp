@@ -1941,6 +1941,9 @@
         <name>$PROJ_DIR$\Source\Include\PounceTypes_v2.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\Source\Include\SM.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\Source\Include\TD.h</name>
       </file>
     </group>
@@ -2005,6 +2008,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\main.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Sources\SM.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\TD.c</name>

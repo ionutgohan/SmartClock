@@ -50,6 +50,8 @@ typedef struct {
 
 
 void TD_Init(void);
+void TD_GetTime(TD_TimeType *pTime);
+void TD_GetDate(TD_DateType *pDate);
 
 
 #endif

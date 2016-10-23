@@ -93,3 +93,19 @@ static void TD_UpdateDate(void)
     }
   }
 }
+
+
+void TD_GetTime(TD_TimeType *pTime)
+{
+  pTime->hour = TD_currentTime.hour;
+  pTime->minutes = TD_currentTime.minutes;
+  pTime->seconds = TD_currentTime.seconds;  
+}
+
+void TD_GetDate(TD_DateType *pDate)
+{
+  pDate->day = TD_currentDate.day;
+  pDate->month = TD_currentDate.month;
+  pDate->year = TD_currentDate.year;
+  pDate->dayOfTheWeek = TD_currentDate.dayOfTheWeek;
+}
