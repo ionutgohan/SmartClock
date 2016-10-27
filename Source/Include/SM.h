@@ -17,6 +17,6 @@ typedef struct {
 } SM_StateInfoType;
 
 void SM_Init(void);
-
+void SM_MainTask(void *params);
 
 #endif

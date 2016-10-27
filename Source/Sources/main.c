@@ -8,6 +8,7 @@
 #include "Driver_SLCD.h"
 #include "TD.h"
 #include "ds18b20.h"
+#include "SM.h"
 #include <string.h>
 
 
@@ -19,19 +20,22 @@ const OS_ScheduledTasksListType OS_scheduledTaskList[] = {
   {1, DispM_MainTask, 0, 512, 10},
   {2, TD_MainTask, 0, 512, 10},
   {3, DS_MainTask, 0, 512, 10},
+  {4, SM_MainTask, 0, 512, 10},
   {.pMainHandler = NULL_PTR}   /* must ALWAYS be the last entry */
 };
 
+
 int main(void)
-{ 
-  
+{   
   InitClock();
   
   DispM_Init();
   
   TD_Init();
   
-  DS_Init();
+  DS_Init();  
+  
+  SM_Init();
   
   OS_Init();
   

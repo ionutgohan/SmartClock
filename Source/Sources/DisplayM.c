@@ -84,8 +84,9 @@ static uint32_t DispM_Strlen(char * pString)
 void DispM_MainTask(void *params)
 {
   while (1) {
-    
-    DispM_state.pDoState[DispM_state.currentState](); 
+    if (DispM_info.stringType != DISPM_SMALL_STRING) {
+      DispM_state.pDoState[DispM_state.currentState](); 
+    }
     Task_Delay(500);    
     
   }
@@ -223,7 +224,6 @@ static void DispM_Error(void)
 void DispM_PrintString(char *pString, uint8_t priority)
 {
   DispM_info.originalStringLen = DispM_Strlen(pString);
-  
   if (DispM_info.originalStringLen > DISPM_MAX_ROW_CHRS) {
     DispM_UpdateBaseDisplayBuffer(pString);    
     DispM_info.stringType = DISPM_BIG_STRING;
@@ -233,9 +233,12 @@ void DispM_PrintString(char *pString, uint8_t priority)
     } else {
       DispM_info.delayDisplay = DISPM_TRUE;
     }
-  } else {
+  } else if (priority < DispM_info.currentPriority) {
     DispM_info.stringType = DISPM_SMALL_STRING;
+    _SLCDModule_ClearLCD(0);
     _SLCDModule_PrintString(pString, 0);
+  } else {    
+    DispM_state.currentState = DISPM_DISPLAY_NORMAL;
   }
   
   DispM_info.newStringAvailable = DISPM_TRUE;
