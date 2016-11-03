@@ -15,7 +15,7 @@ static SM_StateInfoType SM_stateInfo;
 
 void SM_Init(void)
 {
-  SM_stateInfo.currentState = DISPLAY_TEMP;
+  SM_stateInfo.currentState = DISPLAY_TIME;
   SM_stateInfo.stateMainHandler[DISPLAY_TIME] = SM_DisplayTime;
   SM_stateInfo.stateMainHandler[DISPLAY_DATE] = SM_DisplayDate; 
   SM_stateInfo.stateMainHandler[DISPLAY_TEMP] = SM_DisplayTemperature;   
@@ -62,7 +62,7 @@ static void SM_DisplayTime(void)
   stringBuffer[6] = currentTime.seconds / 10 + '0';
   stringBuffer[7] = currentTime.seconds % 10 + '0';
   
-  stringBuffer[2] = stringBuffer[5] = '.';
+  stringBuffer[2] = stringBuffer[5] = ':';
   
   stringBuffer[8] = '\0';
   

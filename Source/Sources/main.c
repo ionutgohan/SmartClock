@@ -39,8 +39,6 @@ int main(void)
   
   OS_Init();
   
-  DispM_PrintString("123456789123456", 5);
-
   OS_StartScheduler();
   
   while (1) {

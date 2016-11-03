@@ -1926,6 +1926,12 @@
         <name>$PROJ_DIR$\Source\Include\DisplayM.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\Source\Include\Driver_Electrodes.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Include\Driver_GPIO.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\Source\Include\Driver_SLCD.h</name>
       </file>
       <file>
@@ -1998,6 +2004,12 @@
         <name>$PROJ_DIR$\Source\Sources\DisplayM.c</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\Source\Sources\Driver_Electrodes.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Sources\Driver_GPIO.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\Source\Sources\Driver_SLCD.c</name>
       </file>
       <file>
@@ -2005,6 +2017,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\Fonts_LCD.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Sources\Fonts_LCD1.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\main.c</name>

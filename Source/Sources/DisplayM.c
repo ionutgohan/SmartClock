@@ -84,12 +84,10 @@ static uint32_t DispM_Strlen(char * pString)
 void DispM_MainTask(void *params)
 {
   while (1) {
-    if (DispM_info.stringType != DISPM_SMALL_STRING) {
-      DispM_state.pDoState[DispM_state.currentState](); 
-    }
-    Task_Delay(500);    
+    DispM_state.pDoState[DispM_state.currentState](); 
     
-  }
+    Task_Delay(500);  
+  }  
 }
 
 static void DispM_UpdateBaseDisplayBuffer(char *pString)
@@ -155,7 +153,7 @@ static uint8_t DispM_SetDisplay(uint8_t *buffer, uint8_t pixelX, uint8_t pixelY)
 
 static void DispM_IdleState(void)
 {
-  
+  /* do nothing */
 }
 
 static void DispM_UpdateDisplayBuffer(void)
@@ -213,7 +211,30 @@ static void DispM_DisplayBuffer(void)
 
 static void DispM_DisplayNormal(void)
 {
-  _SLCDModule_PrintString((char*)DispM_pDisplayBuffer, 0);
+  uint32_t currentRemainder;
+  uint8_t tempBuffer[CHAR_MAX_POSITION_VALUE * DISPM_CHAR_HEIGHT];
+  
+  
+  currentRemainder = (DispM_aui8GlobalStringBuffer + DispM_info.usedBufferSize) - DispM_pDisplayBuffer;
+  
+  if (currentRemainder < sizeof(tempBuffer) ) {
+    memcpy(tempBuffer, DispM_pDisplayBuffer, currentRemainder);
+    
+    memcpy(tempBuffer + currentRemainder, DispM_aui8UnalteredStringBuffer, sizeof(tempBuffer) - currentRemainder);
+    DispM_SetDisplay(tempBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
+  } else {
+    DispM_SetDisplay(DispM_pDisplayBuffer, DISPM_FIRST_PIXEL_X, DISPM_FIRST_PIXEL_Y);
+  }
+  
+  DispM_pDisplayBuffer += DISPM_DYNAMIC_DISP_INC;
+  
+  if ((DispM_pDisplayBuffer - DispM_aui8GlobalStringBuffer) >= DispM_info.usedBufferSize) {
+    DispM_pDisplayBuffer = DispM_aui8GlobalStringBuffer;
+    if (DispM_info.delayDisplay == DISPM_TRUE) {
+      DispM_state.currentState = DISPM_IDLE;
+      DispM_info.delayDisplay = DISPM_FALSE;
+    }
+  }
 }
 
 static void DispM_Error(void)
@@ -224,6 +245,7 @@ static void DispM_Error(void)
 void DispM_PrintString(char *pString, uint8_t priority)
 {
   DispM_info.originalStringLen = DispM_Strlen(pString);
+  
   if (DispM_info.originalStringLen > DISPM_MAX_ROW_CHRS) {
     DispM_UpdateBaseDisplayBuffer(pString);    
     DispM_info.stringType = DISPM_BIG_STRING;
@@ -233,12 +255,16 @@ void DispM_PrintString(char *pString, uint8_t priority)
     } else {
       DispM_info.delayDisplay = DISPM_TRUE;
     }
-  } else if (priority < DispM_info.currentPriority) {
+  } else {        
     DispM_info.stringType = DISPM_SMALL_STRING;
-    _SLCDModule_ClearLCD(0);
-    _SLCDModule_PrintString(pString, 0);
-  } else {    
-    DispM_state.currentState = DISPM_DISPLAY_NORMAL;
+    if (priority <= DispM_info.currentPriority) {
+      _SLCDModule_ClearLCD(0);
+      _SLCDModule_PrintString(pString, 2);
+    } else if (DispM_state.currentState != DISPM_DISPLAY_NORMAL) {          
+      DispM_UpdateBaseDisplayBuffer(pString);   
+      DispM_info.delayDisplay = DISPM_TRUE; 
+      DispM_state.currentState = DISPM_DISPLAY_NORMAL;
+    }
   }
   
   DispM_info.newStringAvailable = DISPM_TRUE;
