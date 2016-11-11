@@ -9,6 +9,7 @@
 #include "TD.h"
 #include "ds18b20.h"
 #include "SM.h"
+#include "TSS_API.h"
 #include <string.h>
 
 
@@ -36,6 +37,8 @@ int main(void)
   DS_Init();  
   
   SM_Init();
+  
+  TSS_Init();
   
   OS_Init();
   

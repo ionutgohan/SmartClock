@@ -314,6 +314,7 @@
           <state>$PROJ_DIR$\Source\Include</state>
           <state>$TOOLKIT_DIR$\CMSIS\Include</state>
           <state>$PROJ_DIR$\Source\Startup</state>
+          <state>$PROJ_DIR$\Source\tss</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1954,6 +1955,12 @@
       </file>
     </group>
     <group>
+      <name>Libs</name>
+      <file>
+        <name>$PROJ_DIR$\Source\Libs\TSS_KXX_iar.a</name>
+      </file>
+    </group>
+    <group>
       <name>OS</name>
       <group>
         <name>inc</name>
@@ -1997,6 +2004,81 @@
     </group>
     <group>
       <name>Sources</name>
+      <group>
+        <name>Tss</name>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\derivative.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_API.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_DataTypes.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_Freemaster.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_GPIO.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_Sensor.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_Sensor.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorCTS.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorCTS.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorGPIO.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorGPIO.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorKBI.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorKBI.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorPTI.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorPTI.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorTIC.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorTIC.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorTSI.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SensorTSI.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_StatusCodes.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SystemSetup.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SystemSetupData.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_SystemSetupVal.h</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\Source\tss\TSS_Timer.h</name>
+        </file>
+      </group>
       <file>
         <name>$PROJ_DIR$\Source\Sources\Clock.c</name>
       </file>
@@ -2017,9 +2099,6 @@
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\Fonts_LCD.c</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\Source\Sources\Fonts_LCD1.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\main.c</name>

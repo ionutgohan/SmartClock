@@ -5,7 +5,6 @@
   #include "TSS_API.h"
 //  #include "MK40X256VMD100.h"
   #include "Driver_GPIO.h"
-  #include <mqx.h>
 
   /**
     Global defines

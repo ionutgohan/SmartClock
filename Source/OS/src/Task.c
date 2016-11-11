@@ -266,26 +266,26 @@ void Task_Delay(uint32_t delayTime_ms)
     /* put the task in the Blocked list */
     pItem = List_RemoveElement(&Task_ReadyList); 
     listParser = &Task_BlockedList;
+    blockedListAddr = (uint32_t)Task_BlockedList.pElems;
     for (;;) {
       pSelectedTask = listParser->pElems->pCurrentItem;
       if (Task_pCurrentTask->blockedCnt < pSelectedTask->blockedCnt) {
         /* insert the element here */
-        List_InsertElement(listParser, pItem);
+        List_InsertElement(listParser, pItem);        
+        blockedListAddr = (uint32_t)listParser->pElems;
         break;
       } else {
         if (listParser->pElems->pNext == NULL) {
           List_InsertElementAtEnd(listParser, pItem);
           break;
         } else {
-          blockedListAddr = (uint32_t)Task_BlockedList.pElems;
           listParser->pElems = listParser->pElems->pNext;
         }
       }
     }
     
-    if (blockedListAddr != 0u) {
-      listParser->pElems = (ListItem_t *)blockedListAddr;   
-    }
+    listParser->pElems = (ListItem_t *)blockedListAddr;   
+    
     
     /* request context switch */
     OS_RequestContextSwitch();

@@ -263,7 +263,7 @@ void DS_MainTask(void *params)
     
     temperature = DS_GetTemperature();
     
-    Task_Delay(500);    
+    Task_Delay(5);    
     
   }
 }
