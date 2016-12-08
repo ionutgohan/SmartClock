@@ -1953,6 +1953,9 @@
       <file>
         <name>$PROJ_DIR$\Source\Include\TD.h</name>
       </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Include\TSS.h</name>
+      </file>
     </group>
     <group>
       <name>Libs</name>
@@ -2108,6 +2111,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\Source\Sources\TD.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\Source\Sources\TSS.c</name>
       </file>
     </group>
     <group>

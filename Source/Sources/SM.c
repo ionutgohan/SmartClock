@@ -7,18 +7,34 @@
 #include "Task.h"
 
 
+static void SM_DisplayTest(void);
 static void SM_DisplayDate(void);
 static void SM_DisplayTime(void);
 static void SM_DisplayTemperature(void);
+static void SM_SetDate(void);
+static void SM_SetTime(void);
 
 static SM_StateInfoType SM_stateInfo;
 
 void SM_Init(void)
 {
-  SM_stateInfo.currentState = DISPLAY_TIME;
+  SM_stateInfo.currentState = DISPLAY_TEST;
+  SM_stateInfo.stateMainHandler[DISPLAY_TEST] = SM_DisplayTest;
   SM_stateInfo.stateMainHandler[DISPLAY_TIME] = SM_DisplayTime;
   SM_stateInfo.stateMainHandler[DISPLAY_DATE] = SM_DisplayDate; 
   SM_stateInfo.stateMainHandler[DISPLAY_TEMP] = SM_DisplayTemperature;   
+  SM_stateInfo.stateMainHandler[SET_TIME] = SM_SetTime;  
+  SM_stateInfo.stateMainHandler[SET_DATE] = SM_SetDate;
+}
+
+extern uint8_t DispCnt;
+static void SM_DisplayTest(void)
+{  
+  char stringBuffer;
+  
+  stringBuffer = DispCnt + '0';
+  
+  DispM_PrintString(&stringBuffer, 1);
 }
 
 
@@ -75,12 +91,38 @@ static void SM_DisplayTemperature(void)
 }
 
 
+static void SM_SetDate(void)
+{
+
+}
+
+
+static void SM_SetTime(void)
+{
+
+}
+
+void SM_RequestNextState(void)
+{
+  if (SM_stateInfo.currentState < (SM_TOTAL_STATES - 1)) {
+    SM_stateInfo.currentState++;
+  }
+}
+
+void SM_RequestPreviousState(void)
+{  
+  if (SM_stateInfo.currentState > DISPLAY_TIME) {
+    SM_stateInfo.currentState--;
+  }
+}
+
+
 
 void SM_MainTask(void *params) 
 {
   while (1) {
     SM_stateInfo.stateMainHandler[SM_stateInfo.currentState]();
     
-    Task_Delay(500);    
+    Task_Delay(50);    
   }
 }

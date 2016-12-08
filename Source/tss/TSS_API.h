@@ -545,5 +545,8 @@
   #endif
 
   #define TSS_SET_SAMPLE_INTERRUPTED()       tss_u8SampleIntFlag = 1;
+      
+      
+void TSS_InitTSS(void);
   
 #endif /* __TSS_API_H__ */

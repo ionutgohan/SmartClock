@@ -253,7 +253,6 @@ void DS_GetStringTemperature(uint8_t *pTemp)
   }
 }
 
-
 int16_t temperature;
 void DS_MainTask(void *params)
 {
@@ -261,9 +260,10 @@ void DS_MainTask(void *params)
   while (1) {
     
     
-    temperature = DS_GetTemperature();
+    //temperature = DS_GetTemperature();
     
-    Task_Delay(5);    
+    
+    Task_Delay(50);    
     
   }
 }

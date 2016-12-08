@@ -271,8 +271,11 @@ void Task_Delay(uint32_t delayTime_ms)
       pSelectedTask = listParser->pElems->pCurrentItem;
       if (Task_pCurrentTask->blockedCnt < pSelectedTask->blockedCnt) {
         /* insert the element here */
-        List_InsertElement(listParser, pItem);        
-        blockedListAddr = (uint32_t)listParser->pElems;
+        List_InsertElement(listParser, pItem); 
+        if (listParser->pElems->pPrevious == NULL) {
+          
+          blockedListAddr = (uint32_t)Task_BlockedList.pElems;
+        }       
         break;
       } else {
         if (listParser->pElems->pNext == NULL) {
